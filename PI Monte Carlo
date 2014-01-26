@@ -1,0 +1,16 @@
+from random import random
+from math import pow
+ 
+simulations = 5000
+hits = 0.0
+ 
+for x in range(simulations):
+  x = random()
+	y = random()
+	distance = pow(x,2) + pow(y,2)
+ 
+	if distance <= 1.0:
+		hits = hits + 1.0
+pi = (hits/simulations) * 4
+ 
+print(pi)
