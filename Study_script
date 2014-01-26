@@ -1,0 +1,16 @@
+import webbrowser
+import sys
+ 
+print ("Do you need to study?")
+print("")
+question = input()
+ 
+if question == "no":
+  webbrowser.open("http://facebook.com/")
+	webbrowser.open("https://mail.google.com/mail/u/0/#inbox")
+	webbrowser.open("http://reddit.com/")
+ 
+elif question == "yes":
+	webbrowser.open("http://simplynoise.com/")
+else:
+	webbrowser.open("http://google.com/")
