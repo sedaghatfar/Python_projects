@@ -1,0 +1,23 @@
+import smtplib
+from email.mime.text import MIMEText
+ 
+# Message to be sent
+message = MIMEText("checking to see if this works")
+ 
+# Sending email username/password and receiving phone number
+email_username = "type username"
+email_password = "password"
+phone_number = "516#######"
+ 
+# Gmail to sprint.
+email_username += "@gmail.com"
+phone_number += "@messaging.sprintpcs.com"
+ 
+
+ 
+# Connect and send
+s = smtplib.SMTP('smtp.gmail.com:587')
+s.starttls()
+s.login(email_username, email_password)
+s.sendmail(email_username, phone_number, message.as_string())
+s.quit()
