@@ -1,0 +1,15 @@
+x = int(input("enter an integer: "))
+ans = 0
+while ans*ans*ans < abs(x):
+    ans = ans +1
+    print ("current Guess =", ans)
+ 
+print ("last guess = ", ans)
+print ("ans*ans*ans = ", ans*ans*ans)
+ 
+if ans*ans*ans == abs(x):
+    if x<0:
+        ans = -ans
+    print ("cube root of   " + str(x) + " is " + str(ans))
+else:
+    print (x, "is not a perfect cube")
