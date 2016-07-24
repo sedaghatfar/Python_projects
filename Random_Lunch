@@ -1,0 +1,18 @@
+#Without Weights
+
+import random
+
+museums = ['The Met', 'MoMa','Guggenheim',
+           'New Museum','Jewish Museum', 'Natural Histroy']
+
+print(random.choice(museums))
+
+#Using Weights
+
+from numpy.random import choice
+
+elements = ['Mendys', 'Tiberias', 'Wolf & Lamb', 'Hummus Kitchen',
+                'Amsterdam Burger','Sushi Fussion', 'Mocha Burger'] 
+weights = [0.05, 0.05, 0.1, 0.2, 0.2, 0.2, 0.2]
+
+print choice(elements, p=weights)
