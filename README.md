@@ -1,4 +1,4 @@
 Python_projects
 ===============
 
-Old projects in Python
+Miscellaneous projects in Python
