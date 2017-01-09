@@ -16,7 +16,7 @@ font = ImageFont.truetype("MiriamMonoCLM-Book.ttf", fontDrawSize)
 sampleDensity=1
 
 
-def main(sefariaRef):
+def lookup(sefariaRef):
     #text input    
     url = 'http://www.sefaria.org/api/texts/'+sefariaRef
     params = dict(
@@ -35,6 +35,8 @@ def main(sefariaRef):
     text = ''.join(char for char in text if char not in exclude)
     strip_cantillation_vowel_regex = re.compile(ur"[^\u05d0-\u05f4\s]", re.UNICODE)
     text = strip_cantillation_vowel_regex.sub('', text)
+    eng = eng.replace("<i>", "")
+    eng = eng.replace("</i>", "")
     
     print '\n'    
     print text
@@ -42,4 +44,4 @@ def main(sefariaRef):
     print eng
 
 if __name__ == '__main__':	
-	main("Mishnah_Berakhot.1.1")
+	lookup("Mishnah_Berakhot.1.1")
