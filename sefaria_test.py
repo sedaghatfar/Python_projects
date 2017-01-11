@@ -1,20 +1,11 @@
-
 import string
 import re
 import requests
 import json
-from PIL import ImageFont
+
 
 # valid text reference
 sefariaRef="Mishnah_Berakhot.1.1" 
-
-
-#set some more variables.
-fontSize = 10
-fontDrawSize = 18
-font = ImageFont.truetype("MiriamMonoCLM-Book.ttf", fontDrawSize)
-sampleDensity=1
-
 
 def lookup(sefariaRef):
     #text input    
